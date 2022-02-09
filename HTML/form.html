@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Student Registration</h1>
+    <form action="request.php" method="get">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="stu-name" required>
+        <br><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="stu-email" required>
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="stu_password" required>
+        <br><br>
+        <label for="phone">Contact Number</label>
+        <input type="number" id="phone" name="stu_phone" required placeholder="Enter Your Contact Number">
+        <br><br>
+        <label for="passport">Passport</label>
+        <input type="file" accept="image/*" id="passport" name="stu_passport">
+        <br><br>
+        <label for="years">Years</label>
+        <Select name="Stu_name" id="years">
+            <option value="">Choose Year</option>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3" selected>Third Year</option>
+
+        </Select>
+        <br><br>
+        <label for="DOB">Date of Birth</label>
+        <input type="Date" id="DOB" name="Stu_DOB">
+        <br><br>
+        <label for="">Hobbies</label>
+        <br>
+        <input type="checkbox" name="reading" id="reading"><label for="reading">Reading</label>
+        <input type="checkbox" name="travelling" id="travelling"><label for="travelling">Travelling</label>
+        <input type="checkbox" name="gaming" id="gaming"><label for="gaming">Gaming</label>
+        <br><br>
+        <label for="">Gender</label>
+        <br>
+        <input type="radio" name="gender" id="male"><label for="male">Male</label>
+        <input type="radio" name="gender" id="female"><label for="female">Female</label>
+        <input type="radio" name="gender" id="other"><label for="other">Other</label>
+        <br><br>
+        <label for="address">Address</label>
+        <textarea name="stu_address" id="address" cols="20" rows="10"></textarea>
+        <br><br>
+        <input type="time">
+        <input type="datetime-local">
+        <input type="week">
+        <br>
+        <input type="color">
+        <input type="range" min="0" max="100" value="20">
+        <input type="text" value="I am Ye Htut Aung" readonly>
+        <button type="submit">Submit</button>
+
+    </form>
+    <br><br>
+    <form action="testing.php" method="get">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="business-name">
+        <br><br>
+        <label for="number">Contact Number</label>
+        <input type="number" id="number" name="buiness-number">
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
