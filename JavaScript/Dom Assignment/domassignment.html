@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Assignment</title>
+</head>
+<body>
+    <div>
+        <h2>DOM Assignment</h2>
+        <label for="user_name">Name:</label>
+        <input type="text" name="name" id="user_name" placeholder="Enter Your Name">
+        <br><br>
+        <label for="user_age">Age:</label>
+        <input type="number" name="number" id="user_age" placeholder="Enter Your Age">
+        <br><br>
+        <button onclick="showTable()">Click</button>
+        <br><br>
+        <table border="2" cellspacing="2" cellpadding="11">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr> 
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+
+        <script>
+            function showTable () {
+                let tbody = document.querySelector('#tbody');
+                let userName = document.querySelector('#user_name').value;
+                let userAge = document.querySelector('#user_age').value;
+
+                let myData = `<tr>
+                            <th>${1}</th>
+                            <th>${userName}</th>
+                            <th>${userAge}</th>                 
+                            </tr>`
+                tbody.innerHTML = myData;
+            }
+        </script>
+        
+    </div>
+    
+</body>
+</html>

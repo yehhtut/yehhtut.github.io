@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+.heading{
+    color: green;
+}
+</style>
+<body>
+    <div>
+        <h1 id="cElement" onclick="attribute()">Creat Element</h1>
+        <button onclick="addElement()">Add Element</button>
+
+        <script>
+            function addElement() {
+                let h3 = document.createElement('h3');
+                h3.innerText = 'Creat H3 Element';
+                document.body.appendChild(h3);
+            }
+        </script>
+    </div>
+    <br>
+
+    <div>
+        <input type="text" name ="name" id="name">
+        <button onclick="adding()">Add</button>
+        <ul id="ul">
+            <li>Apple</li>
+            <li>Orange</li>
+        </ul>
+
+        <script>
+            function adding() {
+                let name = document.querySelector('#name').value;
+                let li = document.createElement('li');
+                li.innerText = name;
+                let ul = document.querySelector('#ul');
+                ul.appendChild(li);
+            }
+
+            function attribute() {
+                let cElement = document.querySelector('#cElement');
+                let attr = cElement.getAttribute('class');
+                if (attr) {
+                    cElement.removeAttribute('class');
+                }else {
+                    cElement.setAttribute('class','heading');
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

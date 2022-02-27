@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM3</title>
+</head>
+<body>
+    <div>
+        <h1 id="header">CSS With DOM</h1>
+        <img src="photo1.jpg" alt="" id="domimg1" width="300" height="200">
+        <img src="photo3.jpg" alt="" id="domimg11" width="300" height="200">
+        <br><br>
+        <button onclick="clickChange()">Click</button>
+        <br><br>
+        <img src="photo2.jpg" alt="" id="domimg2" width="300" height="200" onmouseover="big()" onmouseout="normal()">
+
+        <script>
+            function clickChange () {
+            document.querySelector('#header').style.color = 'orange';
+            document.querySelector('#header').style.backgroundColor = 'black';
+
+            let domimg1 = document.querySelector('#domimg1');
+            domimg1.style.width = '400px';
+            domimg1.style.height = '300px';
+
+            let domimg11 = document.querySelector('#domimg11');
+            domimg11.style.width = '400px';
+            domimg11.style.height = '300px';
+            }
+        function big () {
+            let domimg2 = document.querySelector('#domimg2');
+            domimg2.style.width = '500px';
+            domimg2.style.height = '400px';
+        }
+        function normal () {
+            let domimg2 = document.querySelector('#domimg2');
+            domimg2.style.width = '300px';
+            domimg2.style.height = '200px'; 
+        }
+
+        </script>
+    </div>
+</body>
+</html>
